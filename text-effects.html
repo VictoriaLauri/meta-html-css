@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text-effects</title>
+  <style>
+    .ellipsis {
+      width: 200px;
+      border: solid 1px black;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .ellipsis:hover {
+      overflow: visible;
+    }
+
+    .clip {
+      width: 200px;
+      border: solid 1px black;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: clip;
+    }
+
+    .clip:hover {
+      overflow: visible;
+    }
+
+    .vertical1 {
+      writing-mode: vertical-lr;
+    }
+
+    .vertical2 {
+      writing-mode: vertical-lr;
+      text-orientation: upright;
+      margin-top: 5px; 
+    }
+    
+    .shadow {
+      color: white;
+      text-shadow: 2px 1px 3px black, 2px -1px 10px red;
+      /*
+      1 - x coordinate;
+      2 - y coordinate;
+      3 - blur radius;
+      4 - color;
+      */
+      font-size: 20px;
+    }
+
+    .glow-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+      width: 250px;
+      height: 100px;
+    }
+
+    .glow-container h2 {
+      font-size: 20px;
+      color: rgba(249, 250, 219, 0.864);
+      text-align: center;
+      text-shadow:
+        0 0 10px #fff,
+        0 0 20px #fff,
+        0 0 30px #fff,
+        0 0 40px #c3fc9f,
+        0 0 70px #c3fc9f,
+        0 0 80px #c3fc9f,
+        0 0 100px #c3fc9f,
+        0 0 150px #c3fc9f;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h2>Text Ellipsis</h2>
+    <p class="ellipsis">This is a long text that will not fit in the given space. This is a long text that will not fit in the given space.</p>
+  </div>
+  <div>
+    <h2>Text Clip</h2>
+    <p class="clip">This is a long text that will not fit in the given space. This is a long text that will not fit in the given space.</p>
+  </div>
+  <div>
+    <h2>Vertical text</h2>
+    <p>Horizonal</p>
+    <p class="vertical1">Vertical</p>
+    <p class="vertical2">Vertical</p>
+    <p>Horizontal</p>
+  </div>
+  <div>
+    <h2>Text Shadow</h2>
+    <p class="shadow">This is a text with shadow</p>
+  </div>
+  <div class="glow-container">
+    <h2>This text is glowing</h2>
+  </div>
+</body>
+</html>

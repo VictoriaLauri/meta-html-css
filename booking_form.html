@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking form</title>
+</head>
+<body>
+  <main>
+    <h1> Book a Table</h1>
+    <form method="POST">
+      <div>
+        <label for="date">Choose a date:</label>
+        <input type="date" id="date" name="date">
+      </div>
+      <div>
+        <label for="quantity">Number of guests:</label>
+        <input type="range" id="quantity" name="quantity" min="1" max="10" value="4" oninput="this.nextElementSibling.value = this.value">
+        <output>4</output>
+      </div>
+      <div>
+        <label for="locations">Choose a cafe:</label>
+        <!-- list and id cannot be named the same or else the list will not show-->
+        <input list="locations" id="cafes" name="cafes" />
+        <datalist id="locations">
+          <option value="Chelsea"></option>
+          <option value="Mayfair"></option>
+          <option value="Soho"></option>
+          <option value="Westminster"></option>
+        </datalist>
+      </div>
+      <div>
+        <input type="submit" value="Book now">
+      </div>
+    </form>
+  </main>
+</body>
+</html>

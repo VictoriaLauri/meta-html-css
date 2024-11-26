@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation</title>
+  <style>
+    @keyframes bounce {
+      0% {
+        transform: translate3d(0, 0, 0);
+      }
+      25% {
+        transform: translate3d(200px, 0, 0);
+      }
+      50% {
+        transform: translate3d(200px, 200px, 0);
+      }
+      75% {
+        transform: translate3d(0, 200px, 0);
+      }
+      100% {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+    #ball {
+      width: 100px;
+      height: 100px;
+      background-color: rgb(30, 191, 135);
+      border-radius: 50%;
+      top: 30px;
+      animation: bounce 4s infinite linear;
+    }
+
+    @keyframes square {
+      0% {
+        transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0);
+      }
+      50% {
+        transform: translate3d(200px, 200px, 0) rotate3d(0, 0, 1, 90deg) scale(1.5);
+        background-color: rgb(121, 238, 238);
+      }
+      100% {
+        transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0);
+      }
+    }
+
+    #square {
+      width: 100px;
+      height: 100px;
+      background-color: rgb(196, 110, 249);
+      top: 30px;
+      animation: square 4s infinite linear;
+    }
+  </style>
+</head>
+<body>
+  <h2>Bouncy Ball Animation</h2>
+  <div id="ball"></div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h2>Animated Square</h2>
+  <div id="square"></div>
+</body>
+</html>

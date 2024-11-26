@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox</title>
+  <style>
+    .box {
+      padding: 20px;
+      background-color: rgb(186, 245, 194);
+      border: solid 1px black;
+      border-radius: 5px;
+      font-size: 20px;
+    }
+
+    .container-1,
+    .container-4,
+    .container-5 {
+      display: flex;
+      margin-bottom: 40px;
+    }
+
+    .container-2,
+    .container-3 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      margin-bottom: 40px;
+      gap: 10px;
+    }
+
+    .container-4 {
+      justify-content: space-between;
+    }
+
+    .box-5-1,
+    .box-5-4{
+      flex: 1 1 auto;
+    }
+
+    .box-5-2 {
+      flex: 2 1 auto;
+    }
+
+    .box-5-3 {
+      flex: 3 1 auto;
+    }
+
+    .box-3-2 {
+      align-self: center;
+      background-color: bisque;
+    }
+
+    .search-container {
+      display: inline-flex;
+      flex: 1 1 300px;
+      border-radius: 5px;
+      border: solid 1px rgba(0, 0, 0, 0.729);
+      overflow:hidden
+    }
+
+    .search-icon {
+      width: 32px;
+      height: 28px;
+      padding: 0.5rem;
+      background-color: rgba(195, 194, 194, 0.329);
+    }
+
+    .search-box {
+      border: 0;
+      flex: 1;
+    }
+
+    .search-button {
+      border: 0;
+      padding: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <h3>classic flexbox with row item alignment as default</h3>
+  <div class="container-1">
+    <div class="box box-1-1">One...</div>
+    <div class="box box-1-2">Two...</div>
+    <div class="box box-1-3">Three...</div>
+    <div class="box box-1-4">Four...</div>
+  </div>
+  <h3>flexbox with flex direction set to column and items aligned to flex-start</h3>
+  <div class="container-2">
+    <div class="box box-2-1">One...</div>
+    <div class="box box-2-2">Two...</div>
+    <div class="box box-2-3">Three...</div>
+    <div class="box box-2-4">Four...</div>
+  </div>
+  <h3>Box two self-align example</h3>
+   <div class="container-3">
+    <div class="box box-3-1">One...</div>
+    <div class="box box-3-2">Two...</div>
+    <div class="box box-3-3">Three...</div>
+    <div class="box box-3-4">Four...</div>
+   </div>
+   <h3>flex row and justify content space between</h3>
+   <div class="container-4">
+    <div class="box box-4-1">One...</div>
+    <div class="box box-4-2">Two...</div>
+    <div class="box box-4-3">Three...</div>
+    <div class="box box-4-4">Four...</div>
+   </div>
+   <h3> flex: grow shrink basis; (max-min-ideal)</h3>
+   <!-- grow asks to ideally grow to a ration; if we don't want the item to shrink, then the value of shrink should be 0; ideal basis can be 100% or a set amount of pix and the item will strive to the ideal size; but all of these change depending on the content of the items which overrides the values of flex-->
+   <div class="container-5">
+    <div class="box box-5-1">One...</div>
+    <div class="box box-5-2">Two...</div>
+    <div class="box box-5-3">Three...</div>
+    <div class="box box-5-4">Four...</div>
+   </div>
+   <h3>Search Bar</h3>
+   <div class="search-container">
+    <img class="search-icon" src="assets/search_Icon.svg" alt="search icon">
+    <input type="search" class="search-box" placeholder="Type text here">
+    <input type="submit" class="search-button" value="Search">
+   </div>
+</body>
+</html>
